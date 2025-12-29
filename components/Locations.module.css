@@ -1,0 +1,154 @@
+.sectionTitle {
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--color-gray-600);
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+}
+
+.locationsContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.locationTable {
+    background: white;
+    box-shadow: var(--shadow-lg);
+}
+
+.locationTable th {
+    background: var(--gradient-primary);
+    color: white;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.locationTable td {
+    vertical-align: middle;
+}
+
+.provinceCell {
+    font-weight: 700;
+    color: var(--color-primary);
+    white-space: nowrap;
+}
+
+.districtsCell {
+    font-size: 0.875rem;
+    color: var(--color-gray-600);
+}
+
+.mapBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-blue);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.mapBtn:hover {
+    background: var(--color-blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.serviceNote {
+    display: flex;
+    gap: 1.5rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    border-left: 5px solid var(--color-primary);
+    box-shadow: var(--shadow-md);
+}
+
+.noteIcon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--color-primary-lighter);
+    color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.serviceNote h3 {
+    color: var(--color-gray-900);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.serviceNote p {
+    color: var(--color-gray-700);
+    line-height: 1.8;
+    margin: 0;
+}
+
+.serviceNote strong {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .locationTable {
+        font-size: 0.875rem;
+    }
+
+    .locationTable th,
+    .locationTable td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .districtsCell {
+        font-size: 0.8125rem;
+    }
+
+    .mapBtn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.8125rem;
+    }
+
+    .serviceNote {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+}

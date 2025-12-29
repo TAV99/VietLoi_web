@@ -1,0 +1,143 @@
+.sectionTitle {
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--color-gray-600);
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+}
+
+.categoriesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.categoryCard {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.categoryCard:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.imageWrapper {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.categoryCard:hover .imageWrapper img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(220, 38, 38, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.categoryCard:hover .overlay {
+    opacity: 1;
+}
+
+.learnMore {
+    background: white;
+    color: var(--color-primary);
+    padding: 0.875rem 1.75rem;
+    border: none;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.learnMore:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cardContent {
+    padding: 1.5rem;
+}
+
+.cardContent h3 {
+    font-size: 1.25rem;
+    color: var(--color-gray-900);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.cardContent p {
+    color: var(--color-gray-600);
+    line-height: 1.6;
+    font-size: 0.9375rem;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .categoriesGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .categoriesGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .imageWrapper {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .categoriesGrid {
+        grid-template-columns: 1fr;
+    }
+}

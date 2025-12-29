@@ -1,0 +1,138 @@
+.sectionTitle {
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--color-gray-600);
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+}
+
+.tableContainer {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    overflow-x: auto;
+}
+
+.commissionTable {
+    background: white;
+    box-shadow: var(--shadow-lg);
+}
+
+.commissionTable thead {
+    background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+}
+
+.commissionTable th {
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 1.25rem;
+    font-size: 1rem;
+}
+
+.commissionTable td {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-gray-800);
+    padding: 1.25rem;
+}
+
+.rangeCell {
+    background: var(--color-gray-100);
+    color: var(--color-primary);
+    font-weight: 700;
+    text-align: left !important;
+}
+
+.commissionTable tbody tr:hover {
+    background: var(--color-blue-light);
+    color: white;
+}
+
+.commissionTable tbody tr:hover .rangeCell {
+    background: var(--color-blue-dark);
+    color: white;
+}
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.highlightCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.highlightCard:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-blue);
+}
+
+.highlightIcon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.highlightCard h3 {
+    font-size: 1.25rem;
+    color: var(--color-gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.highlightCard p {
+    color: var(--color-gray-600);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .commissionTable th,
+    .commissionTable td {
+        padding: 0.875rem 0.5rem;
+        font-size: 0.875rem;
+    }
+}

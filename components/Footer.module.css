@@ -1,0 +1,142 @@
+.footer {
+    background: var(--color-gray-900);
+    color: var(--color-gray-300);
+    padding: 3rem 0 1rem;
+}
+
+.footerContent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.column h3 {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    border-bottom: 3px solid var(--color-primary);
+    padding-bottom: 0.75rem;
+    display: inline-block;
+}
+
+.companyInfo p {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.companyInfo svg {
+    flex-shrink: 0;
+    color: var(--color-primary);
+}
+
+.companyInfo strong {
+    color: white;
+}
+
+.categoryList,
+.linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categoryList li,
+.linkList li {
+    margin-bottom: 0.75rem;
+}
+
+.categoryList a,
+.linkList a {
+    color: var(--color-gray-300);
+    font-size: 0.9375rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.categoryList a:hover,
+.linkList a:hover {
+    color: var(--color-primary);
+    transform: translateX(5px);
+}
+
+.socialLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.socialBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--color-gray-800);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.socialBtn:hover {
+    background: var(--color-primary);
+    transform: translateX(5px);
+}
+
+.socialBtn svg {
+    flex-shrink: 0;
+}
+
+.mapPlaceholder {
+    margin-top: 1rem;
+}
+
+.footerBottom {
+    border-top: 1px solid var(--color-gray-700);
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: var(--color-gray-400);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.footerBottom a {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.footerBottom a:hover {
+    color: var(--color-primary-light);
+}
+
+@media (max-width: 1024px) {
+    .footerContent {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+
+    .footerContent {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .column h3 {
+        font-size: 1.125rem;
+    }
+}

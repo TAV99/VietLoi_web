@@ -1,0 +1,258 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.topBar {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 0.75rem 0;
+}
+
+.topContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.hotlines {
+    display: flex;
+    gap: 1rem;
+}
+
+.hotlineBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hotlineBtn:hover {
+    background: white;
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.mainNav {
+    background: var(--color-gray-900);
+}
+
+.navList {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navList li a {
+    display: block;
+    color: white;
+    padding: 1rem 0;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navList li a:hover {
+    color: var(--color-primary-light);
+}
+
+.navList li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.navList li a:hover::after {
+    width: 100%;
+}
+
+.secondaryNav {
+    background: var(--color-gray-100);
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.categories {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.categoryItem {
+    color: var(--color-gray-700);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.categoryItem:hover {
+    color: var(--color-primary);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    z-index: 1002;
+    overflow-y: auto;
+}
+
+.mobileMenu.open {
+    right: 0;
+}
+
+.mobileMenuContent {
+    padding: 2rem 1.5rem;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-gray-600);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobileNavList {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.mobileNavList li {
+    margin-bottom: 1rem;
+}
+
+.mobileNavList li a {
+    display: block;
+    color: var(--color-gray-900);
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-gray-200);
+    cursor: pointer;
+}
+
+.mobileCategoriesTitle {
+    font-weight: 700;
+    color: var(--color-gray-900);
+    margin: 2rem 0 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.mobileCategories {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.mobileCategories span {
+    color: var(--color-gray-700);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-gray-200);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .mainNav,
+    .secondaryNav {
+        display: none;
+    }
+
+    .hotlines {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hotlineBtn {
+        font-size: 0.875rem;
+        padding: 0.4rem 0.75rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .logo img {
+        width: 32px;
+        height: 32px;
+    }
+}

@@ -1,0 +1,116 @@
+.sectionTitle {
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.content {
+    display: grid;
+    gap: 3rem;
+}
+
+.description {
+    background: var(--color-gray-100);
+    padding: 2rem;
+    border-radius: 1rem;
+    border-left: 5px solid var(--color-primary);
+}
+
+.description h3 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.description p {
+    color: var(--color-gray-700);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.description p:last-child {
+    margin-bottom: 0;
+}
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.benefitItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.benefitItem:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    border: 2px solid var(--color-primary-lighter);
+}
+
+.benefitIcon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefitItem h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-gray-900);
+    margin-bottom: 0.25rem;
+}
+
+.benefitItem p {
+    font-size: 0.875rem;
+    color: var(--color-gray-600);
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .description {
+        padding: 1.5rem;
+    }
+}
