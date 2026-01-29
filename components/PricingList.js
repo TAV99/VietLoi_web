@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import styles from './PricingTable.module.css';
 
-export default function PricingList({ pricingData, lastUpdated }) {
+export default function PricingList({ pricingData, lastUpdated, renderTime }) {
     // Determine the first category key to open by default, or 'copper' as fallback
     const firstCategory = Object.keys(pricingData)[0] || 'copper';
     const [openCategory, setOpenCategory] = useState(firstCategory);
@@ -47,7 +47,6 @@ export default function PricingList({ pricingData, lastUpdated }) {
                                                 <th>Tên hàng</th>
                                                 <th>Giá (VNĐ/kg)</th>
                                                 <th>Đơn vị tính</th>
-                                                {/* Removed 'Giá đến' as likely singular price string in CSV, adapted headers */}
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -77,7 +76,15 @@ export default function PricingList({ pricingData, lastUpdated }) {
                         Xem đầy đủ bảng giá →
                     </a>
                 </div>
+
+                {/* Debug: Last render timestamp - remove in production */}
+                {renderTime && (
+                    <p style={{ textAlign: 'center', fontSize: '0.75rem', color: '#999', marginTop: '1rem' }}>
+                        🕒 Rendered at: {renderTime}
+                    </p>
+                )}
             </div>
         </section>
     );
 }
+
