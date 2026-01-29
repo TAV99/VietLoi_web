@@ -109,7 +109,7 @@ export default function Footer() {
 
                 <div className={styles.footerBottom}>
                     <p>&copy; 2025 Công Ty Thu Mua Phế Liệu. Tất cả quyền được bảo lưu.</p>
-                    <p>Thiết kế bởi <a href="#">WebDesign Team</a></p>
+                    <p>Thiết kế bởi <a href="#">X:Group</a></p>
                 </div>
             </div>
         </footer>

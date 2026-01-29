@@ -29,8 +29,8 @@ export default function Header() {
                 <div className="container">
                     <div className={styles.topContent}>
                         <div className={styles.logo}>
-                            <img src="/logo.png" alt="Thu Mua Phế Liệu" />
-                            <span>Thu Mua Phế Liệu</span>
+                            <img src="/logo.png" alt="VIỆT LỢI" />
+                            <span>CÔNG TY TNHH VIỆT LỢI</span>
                         </div>
                         <div className={styles.hotlines}>
                             <a href="tel:0909123456" className={styles.hotlineBtn}>
