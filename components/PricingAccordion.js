@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from './PricingTable.module.css';
 
 /**
@@ -34,9 +34,50 @@ const CATEGORY_ORDER = [
 /**
  * Global Collapsible Pricing Table
  * Features a red header that toggles the entire table visibility.
+ * Auto-opens on scroll (once) or when navigating via #pricing anchor.
  */
 export default function PricingAccordion({ data, lastUpdated }) {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false); // Start CLOSED
+    const containerRef = useRef(null);
+    const hasAutoOpened = useRef(false); // Track if auto-open already happened
+
+    // Auto-open logic: scroll into view OR anchor link
+    useEffect(() => {
+        // Handler for hash changes AND initial check
+        const handleHashChange = () => {
+            if (window.location.hash === '#pricing') {
+                setIsOpen(true);
+                hasAutoOpened.current = true;
+            }
+        };
+
+        // Check immediately on mount (for direct URL access like /#pricing)
+        handleHashChange();
+
+        // IntersectionObserver for scroll-triggered auto-open
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting && !hasAutoOpened.current) {
+                    setIsOpen(true);
+                    hasAutoOpened.current = true;
+                    observer.disconnect(); // Stop observing after auto-open
+                }
+            },
+            { threshold: 0.2 } // Trigger when 20% visible (more reliable)
+        );
+
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
+        }
+
+        // Listen for hash changes (clicking nav link while on page)
+        window.addEventListener('hashchange', handleHashChange);
+
+        return () => {
+            observer.disconnect();
+            window.removeEventListener('hashchange', handleHashChange);
+        };
+    }, []);
 
     // Get current date for header
     const today = new Date().toLocaleDateString('vi-VN', {
@@ -73,7 +114,12 @@ export default function PricingAccordion({ data, lastUpdated }) {
     let rowIndex = 0;
 
     return (
-        <section id="pricing" className="section section-alt">
+        <section
+            id="pricing"
+            ref={containerRef}
+            className="section section-alt"
+            style={{ scrollMarginTop: '100px' }}
+        >
             <div className="container">
                 <h2 className={styles.sectionTitle}>Bảng Giá Phế Liệu</h2>
                 <p className={styles.subtitle}>

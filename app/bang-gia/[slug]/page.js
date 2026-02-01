@@ -30,6 +30,9 @@ export async function generateMetadata({ params }) {
         title: `${info.title} | Bảng Giá Mới Nhất 2026`,
         description: info.description,
         keywords: info.keywords,
+        alternates: {
+            canonical: `/bang-gia/${slug}`,
+        },
         openGraph: {
             title: info.title,
             description: info.description,

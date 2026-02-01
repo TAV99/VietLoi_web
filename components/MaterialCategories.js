@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './MaterialCategories.module.css';
 import Link from 'next/link';
 import { slugify } from '@/lib/utils';
@@ -62,7 +63,13 @@ export default function MaterialCategories() {
                             className={styles.categoryCard}
                         >
                             <div className={styles.imageWrapper}>
-                                <img src={category.image} alt={category.name} />
+                                <Image
+                                    src={category.image}
+                                    alt={`Thu mua phế liệu ${category.name}`}
+                                    fill
+                                    sizes="(max-width: 768px) 50vw, 25vw"
+                                    style={{ objectFit: 'cover' }}
+                                />
                                 <div className={styles.overlay}>
                                     <span className={styles.learnMore}>Xem bảng giá →</span>
                                 </div>

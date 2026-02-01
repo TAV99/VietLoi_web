@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Header.module.css';
 import { slugify } from '@/lib/utils';
 
@@ -36,7 +37,13 @@ export default function Header() {
                 <div className="container">
                     <div className={styles.topContent}>
                         <Link href="/" className={styles.logo} onClick={closeMenu}>
-                            <img src="/logo.png" alt="VIỆT LỢI" />
+                            <Image
+                                src="/logo.png"
+                                alt="VIỆT LỢI - Thu Mua Phế Liệu"
+                                width={40}
+                                height={40}
+                                priority
+                            />
                             <span>CÔNG TY TNHH KD TM DV VIỆT LỢI</span>
                         </Link>
                         <a href="tel:0979065588" className={styles.ctaHotline}>
@@ -100,7 +107,13 @@ export default function Header() {
                     <button className={styles.closeBtn} onClick={closeMenu}>×</button>
                     <ul className={styles.mobileNavList}>
                         <li><Link href="/" onClick={closeMenu}>Trang chủ</Link></li>
-                        <li><Link href="/#pricing" onClick={closeMenu}>Bảng giá</Link></li>
+                        <li><Link href="/#pricing" onClick={() => {
+                            // Hack nhỏ: Chờ 100ms để trang cuộn rồi mới tìm bảng giá để mở
+                            setTimeout(() => {
+                                const table = document.getElementById('pricing');
+                                if (table) table.click(); // Giả lập bấm vào bảng giá để mở
+                            }, 100);
+                        }}>Bảng giá</Link></li>
                         <li><Link href="/#about" onClick={closeMenu}>Giới thiệu</Link></li>
                         <li><Link href="/#contact" onClick={closeMenu}>Liên hệ</Link></li>
                     </ul>

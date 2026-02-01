@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './NewsSection.module.css';
 
 export default function NewsSection() {
@@ -40,7 +41,13 @@ export default function NewsSection() {
                     {articles.map((article, index) => (
                         <article key={index} className={styles.articleCard}>
                             <div className={styles.articleImage}>
-                                <img src={article.image} alt={article.title} />
+                                <Image
+                                    src={article.image}
+                                    alt={article.title}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 25vw"
+                                    style={{ objectFit: 'cover' }}
+                                />
                                 <div className={styles.dateTag}>{article.date}</div>
                             </div>
                             <div className={styles.articleContent}>

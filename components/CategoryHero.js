@@ -1,13 +1,17 @@
+import Image from 'next/image';
 import styles from './CategoryHero.module.css';
 
 export default function CategoryHero({ info }) {
     return (
         <section className={styles.hero}>
             <div className={styles.background}>
-                <img
+                <Image
                     src={info.image}
                     alt={info.name}
-                    className={styles.backgroundImage}
+                    fill
+                    priority
+                    sizes="100vw"
+                    style={{ objectFit: 'cover' }}
                 />
                 <div className={styles.overlay}></div>
             </div>
