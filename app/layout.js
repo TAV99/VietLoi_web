@@ -11,12 +11,21 @@ const inter = Inter({
 })
 
 export const metadata = {
-    metadataBase: new URL('https://vietloi.vn'),
-    title: 'Thu Mua Phế Liệu Giá Cao - Nhanh Chóng Uy Tín',
-    description: 'Dịch vụ thu mua phế liệu giá cao tận nơi trên toàn quốc. Thu mua nhôm, đồng, inox, sắt thép, chì, niken, hợp kim. Báo giá nhanh, thanh toán liền tay.',
+    metadataBase: new URL('https://phelieuvietloi.com'),
+    title: {
+        default: 'Thu Mua Phế Liệu Việt Lợi | Giá Cao - Uy Tín',
+        template: '%s | Việt Lợi'
+    },
+    description: 'Công ty thu mua phế liệu giá cao Việt Lợi tận nơi trên toàn quốc. Thu mua nhôm, đồng, inox, sắt thép, chì, niken, hợp kim. Báo giá nhanh, thanh toán liền tay.',
     keywords: 'thu mua phế liệu, phế liệu giá cao, thu mua nhôm, thu mua đồng, thu mua inox, thu mua sắt thép',
     alternates: {
-        canonical: '/',
+        canonical: './',
+    },
+    openGraph: {
+        url: 'https://phelieuvietloi.com',
+        siteName: 'Phế Liệu Việt Lợi',
+        locale: 'vi_VN',
+        type: 'website',
     },
     icons: {
         icon: [

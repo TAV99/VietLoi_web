@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://vietloi.vn';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://phelieuvietloi.com';
 
 export default function robots() {
     return {

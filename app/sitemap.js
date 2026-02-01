@@ -1,6 +1,6 @@
 import { materialInfo } from '@/lib/materialInfo';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://vietloi.vn';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://phelieuvietloi.com';
 
 export default function sitemap() {
     // 1. Static Routes
