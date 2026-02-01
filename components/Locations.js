@@ -62,7 +62,7 @@ export default function Locations() {
                             <h3>Phục vụ toàn quốc 24/7</h3>
                             <p>
                                 Ngoài các chi nhánh chính, chúng tôi còn có đội ngũ thu mua di động phục vụ trên toàn quốc.
-                                Liên hệ hotline <strong>0909 123 456</strong> hoặc <strong>0988 765 432</strong> để được báo giá và hỗ trợ ngay.
+                                Liên hệ hotline <strong>0979065588</strong> hoặc <strong>0988 765 432</strong> để được báo giá và hỗ trợ ngay.
                             </p>
                         </div>
                     </div>

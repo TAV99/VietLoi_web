@@ -30,7 +30,7 @@ export default function Header() {
                     <div className={styles.topContent}>
                         <div className={styles.logo}>
                             <img src="/logo.png" alt="VIỆT LỢI" />
-                            <span>CÔNG TY TNHH VIỆT LỢI</span>
+                            <span>CÔNG TY TNHH KD TM DV VIỆT LỢI</span>
                         </div>
                         <div className={styles.hotlines}>
                             <a href="tel:0909123456" className={styles.hotlineBtn}>

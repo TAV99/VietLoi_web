@@ -29,7 +29,7 @@ export default function CompanyIntro() {
                             </div>
                             <div>
                                 <h4>Hotline 1</h4>
-                                <p>0909 123 456</p>
+                                <p>00979065588</p>
                             </div>
                         </div>
 

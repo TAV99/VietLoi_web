@@ -6,7 +6,7 @@ const FloatingActions = () => {
         <div className={styles.container}>
             {/* Zalo Button */}
             <a
-                href="https://zalo.me/0988765432"
+                href="https://zalo.me/0979065588"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.button} ${styles.zaloButton}`}
