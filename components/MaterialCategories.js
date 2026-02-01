@@ -1,4 +1,6 @@
 import styles from './MaterialCategories.module.css';
+import Link from 'next/link';
+import { slugify } from '@/lib/utils';
 
 export default function MaterialCategories() {
     const categories = [
@@ -28,19 +30,19 @@ export default function MaterialCategories() {
             image: '/steel.jpg'
         },
         {
-            name: 'Hợp kim',
-            description: 'Thu mua các loại hợp kim đồng, nhôm, kẽm',
-            image: '/aluminum.jpg'
-        },
-        {
-            name: 'Vải tồn kho',
-            description: 'Thu mua vải tồn kho, vải phế liệu các loại',
+            name: 'Nhựa',
+            description: 'Thu mua nhựa PP, PVC, PET và các loại nhựa phế liệu',
             image: '/copper.jpg'
         },
         {
-            name: 'Linh kiện điện tử',
-            description: 'Thu mua bo mạch, linh kiện điện tử, phế liệu điện tử',
-            image: '/electronic.jpg'
+            name: 'Giấy',
+            description: 'Thu mua giấy carton, bìa cứng và các loại giấy phế liệu',
+            image: '/aluminum.jpg'
+        },
+        {
+            name: 'Vàng',
+            description: 'Thu mua vàng phế liệu, vàng từ linh kiện điện tử',
+            image: '/copper.jpg'
         }
     ];
 
@@ -54,18 +56,22 @@ export default function MaterialCategories() {
 
                 <div className={styles.categoriesGrid}>
                     {categories.map((category, index) => (
-                        <div key={index} className={styles.categoryCard}>
+                        <Link
+                            key={index}
+                            href={`/bang-gia/${slugify(category.name)}`}
+                            className={styles.categoryCard}
+                        >
                             <div className={styles.imageWrapper}>
                                 <img src={category.image} alt={category.name} />
                                 <div className={styles.overlay}>
-                                    <button className={styles.learnMore}>Tìm hiểu thêm →</button>
+                                    <span className={styles.learnMore}>Xem bảng giá →</span>
                                 </div>
                             </div>
                             <div className={styles.cardContent}>
                                 <h3>{category.name}</h3>
                                 <p>{category.description}</p>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

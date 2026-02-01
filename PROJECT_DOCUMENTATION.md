@@ -278,7 +278,7 @@ npm run lint
 {
   "@type": "LocalBusiness",
   "name": "Thu Mua Phế Liệu Giá Cao",
-  "telephone": ["0909123456", "0988765432"],
+  "telephone": ["0979065588", "0988765432"],
   "email": "info@thumuaphelieu.com",
   "address": [...],
   "openingHours": "Mo-Su 00:00-23:59",
@@ -318,7 +318,7 @@ npm run lint
 
 ## 👥 Thông Tin Liên Hệ (Demo)
 
-**Hotline:** 0909123456, 0988765432  
+**Hotline:** 0979065588, 0988765432  
 **Email:** info@thumuaphelieu.com  
 **Địa chỉ:**
 - **TP. HCM:** 123 Đường Nguyễn Văn Linh, Quận 7

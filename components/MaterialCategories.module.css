@@ -33,6 +33,8 @@
 }
 
 .categoryCard {
+    display: block;
+    text-decoration: none;
     background: white;
     border-radius: 1rem;
     overflow: hidden;

@@ -34,7 +34,7 @@ export default function Home() {
                         "@type": "LocalBusiness",
                         "name": "Thu Mua Phế Liệu Giá Cao",
                         "description": "Dịch vụ thu mua phế liệu giá cao tận nơi",
-                        "telephone": ["0909123456", "0988765432"],
+                        "telephone": ["0979065588", "0988765432"],
                         "email": "info@thumuaphelieu.com",
                         "address": [
                             {

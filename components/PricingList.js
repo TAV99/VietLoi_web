@@ -1,12 +1,36 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './PricingTable.module.css';
+import { slugify } from '@/lib/utils';
 
 export default function PricingList({ pricingData, lastUpdated, renderTime }) {
     // Determine the first category key to open by default, or 'copper' as fallback
     const firstCategory = Object.keys(pricingData)[0] || 'copper';
     const [openCategory, setOpenCategory] = useState(firstCategory);
+
+    // Handle URL hash navigation - auto-expand the targeted category
+    useEffect(() => {
+        const handleHashChange = () => {
+            const hash = window.location.hash.slice(1); // Remove '#'
+            if (hash) {
+                // Find the category that matches this hash
+                const matchingKey = Object.entries(pricingData).find(
+                    ([, category]) => slugify(category.name) === hash
+                );
+                if (matchingKey) {
+                    setOpenCategory(matchingKey[0]);
+                }
+            }
+        };
+
+        // Check on mount
+        handleHashChange();
+
+        // Listen for hash changes
+        window.addEventListener('hashchange', handleHashChange);
+        return () => window.removeEventListener('hashchange', handleHashChange);
+    }, [pricingData]);
 
     return (
         <section id="pricing" className="section section-alt">
@@ -19,7 +43,11 @@ export default function PricingList({ pricingData, lastUpdated, renderTime }) {
 
                 <div className={styles.pricingContainer}>
                     {Object.entries(pricingData).map(([key, category]) => (
-                        <div key={key} className={styles.categoryCard}>
+                        <div
+                            key={key}
+                            id={slugify(category.name)}
+                            className={styles.categoryCard}
+                        >
                             <button
                                 className={`${styles.categoryHeader} ${openCategory === key ? styles.active : ''}`}
                                 onClick={() => setOpenCategory(openCategory === key ? null : key)}
