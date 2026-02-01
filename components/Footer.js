@@ -8,30 +8,24 @@ export default function Footer() {
                     <div className={styles.column}>
                         <h3>Thông Tin Công Ty</h3>
                         <div className={styles.companyInfo}>
-                            <p><strong>Công Ty Thu Mua Phế Liệu</strong></p>
+                            <p><strong>Công Ty TNHH KD TM DV Việt Lợi</strong></p>
                             <p>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                                 </svg>
-                                Hotline 1: 00979065588
-                            </p>
-                            <p>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                                </svg>
-                                Hotline 2: 0988 765 432
+                                Hotline : 0979065588
                             </p>
                             <p>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                                     <polyline points="22,6 12,13 2,6" />
                                 </svg>
-                                Email: info@thumuaphelieu.com
+                                Email: ducongthao168@gmail.com
                             </p>
-                            <p><strong>MST:</strong> 0123456789</p>
-                            <p><strong>TP.HCM:</strong> 123 Nguyễn Văn Linh, Q.7</p>
-                            <p><strong>Hà Nội:</strong> 456 Giải Phóng, Hoàng Mai</p>
-                            <p><strong>Bình Dương:</strong> 789 Bình Dương, Thủ Dầu Một</p>
+                            <p><strong>MST:</strong> 3702541855</p>
+                            {/* <p><strong>TP.HCM:</strong> 123 Nguyễn Văn Linh, Q.7</p> */}
+                            {/* <p><strong>Hà Nội:</strong> 456 Giải Phóng, Hoàng Mai</p> */}
+                            <p><strong>Địa chỉ:</strong> Số 10/3, khu phố Bình Phước B, Phường An Phú, TP Hồ Chí Minh, Việt Nam</p>
                         </div>
                     </div>
 
@@ -96,7 +90,7 @@ export default function Footer() {
                         </div>
                         <div className={styles.mapPlaceholder}>
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6306738563224!2d106.69527631480092!3d10.762622792323174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4b3330bcc9%3A0x5a8a31b93a3c2c7a!2zSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1234567890123!5m2!1svi!2s"
+                                src="https://maps.google.com/maps?q=10.97113074683749,106.72992757022226&z=15&output=embed"
                                 width="100%"
                                 height="200"
                                 style={{ border: 0, borderRadius: '0.5rem' }}

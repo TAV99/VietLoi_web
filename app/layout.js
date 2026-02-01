@@ -18,12 +18,24 @@ export const metadata = {
     alternates: {
         canonical: '/',
     },
+    icons: {
+        icon: [
+            { url: '/favicon.ico' },
+            { url: '/favicon-96x96.png', type: 'image/png' },
+            { url: '/favicon.svg', type: 'image/svg+xml' },
+        ],
+        apple: [
+            { url: '/apple-touch-icon.png' },
+        ],
+    },
+    manifest: '/site.webmanifest',
 }
 
 export const viewport = {
     width: 'device-width',
     initialScale: 1,
     maximumScale: 5, // Accessibility best practice
+    themeColor: '#ffffff',
 }
 
 export default function RootLayout({ children }) {

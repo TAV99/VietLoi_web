@@ -2,12 +2,11 @@ import styles from './Locations.module.css';
 
 export default function Locations() {
     const locations = [
-        { province: 'TP. Hồ Chí Minh', address: '123 Đường Nguyễn Văn Linh, Quận 7', districts: 'Quận 1, 2, 3, 4, 5, 7, Bình Tân, Tân Bình, Tân Phú' },
-        { province: 'Hà Nội', address: '456 Đường Giải Phóng, Quận Hoàng Mai', districts: 'Ba Đình, Hoàn Kiếm, Đống Đa, Hai Bà Trưng, Cầu Giấy' },
-        { province: 'Bình Dương', address: '789 Đại lộ Bình Dương, Thủ Dầu Một', districts: 'Thủ Dầu Một, Dĩ An, Thuận An' },
-        { province: 'Đồng Nai', address: '321 Đường Võ Thị Sáu, Biên Hòa', districts: 'Biên Hòa, Long Khánh, Nhơn Trạch' },
-        { province: 'Đà Nẵng', address: '654 Đường Điện Biên Phủ, Quận Thanh Khê', districts: 'Hải Châu, Thanh Khê, Sơn Trà' },
-        { province: 'Cần Thơ', address: '987 Đường 30/4, Quận Ninh Kiều', districts: 'Ninh Kiều, Cái Răng, Bình Thủy' },
+        {
+            province: 'Thành phố Hồ Chí Minh',
+            address: 'Số 10/3, khu phố Bình Phước B, Phường An Phú, TP Hồ Chí Minh, Việt Nam',
+            districts: 'Thành phố Hồ Chí Minh và các tỉnh lân cận'
+        }
     ];
 
     return (
@@ -62,7 +61,7 @@ export default function Locations() {
                             <h3>Phục vụ toàn quốc 24/7</h3>
                             <p>
                                 Ngoài các chi nhánh chính, chúng tôi còn có đội ngũ thu mua di động phục vụ trên toàn quốc.
-                                Liên hệ hotline <strong>0979065588</strong> hoặc <strong>0988 765 432</strong> để được báo giá và hỗ trợ ngay.
+                                Liên hệ hotline <strong>0979065588</strong> để được báo giá và hỗ trợ ngay.
                             </p>
                         </div>
                     </div>

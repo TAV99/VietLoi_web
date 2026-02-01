@@ -40,8 +40,8 @@ export default function CompanyIntro() {
                                 </svg>
                             </div>
                             <div>
-                                <h4>Hotline 2</h4>
-                                <p>0988 765 432</p>
+                                <h4>Email</h4>
+                                <p>ducongthao168@gmail.com</p>
                             </div>
                         </div>
 
