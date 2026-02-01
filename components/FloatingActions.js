@@ -25,7 +25,7 @@ const FloatingActions = () => {
 
             {/* Call Button */}
             <a
-                href="tel:0988765432"
+                href="tel:0979065588"
                 className={`${styles.button} ${styles.callButton}`}
                 aria-label="Call Now"
             >
