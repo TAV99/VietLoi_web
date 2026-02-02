@@ -13,7 +13,7 @@ const FloatingActions = () => {
                 aria-label="Chat on Zalo"
             >
                 <Image
-                    src="/Icon_of_Zalo.svg"
+                    src="/images/Icon_of_Zalo.svg"
                     alt="Zalo"
                     width={40}
                     height={40}

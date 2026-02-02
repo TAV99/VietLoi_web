@@ -7,25 +7,25 @@ export default function NewsSection() {
             title: 'Bảng giá phế liệu mới nhất tháng 12/2025',
             excerpt: 'Cập nhật bảng giá thu mua phế liệu các loại: đồng, nhôm, inox, sắt thép mới nhất. Giá có xu hướng tăng nhẹ so với tháng trước.',
             date: '20/12/2025',
-            image: '/copper.jpg'
+            image: '/images/copper.jpg'
         },
         {
             title: 'Hướng dẫn phân loại phế liệu để bán được giá cao',
             excerpt: 'Cách phân loại phế liệu đúng cách giúp bạn có thể bán được giá cao hơn. Tìm hiểu ngay để tối ưu hóa lợi nhuận.',
             date: '18/12/2025',
-            image: '/aluminum.jpg'
+            image: '/images/aluminum.jpg'
         },
         {
             title: 'Chính sách ưu đãi cho khách hàng lớn năm 2025',
             excerpt: 'Đặc biệt dành cho khách hàng có số lượng lớn, hoa hồng hấp dẫn lên đến 5% giá trị đơn hàng.',
             date: '15/12/2025',
-            image: '/stainless.jpg'
+            image: '/images/stainless.jpg'
         },
         {
             title: 'Quy trình thu mua phế liệu chuyên nghiệp',
             excerpt: 'Tìm hiểu quy trình thu mua phế liệu 5 bước đơn giản, nhanh chóng và uy tín của chúng tôi.',
             date: '12/12/2025',
-            image: '/steel.jpg'
+            image: '/images/steel.jpg'
         }
     ];
 

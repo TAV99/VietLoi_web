@@ -19,7 +19,6 @@ function extractMaxPrice(priceString) {
  * Category order for sorting
  */
 const CATEGORY_ORDER = [
-    'Vàng',
     'Đồng',
     'Nhôm',
     'Inox',

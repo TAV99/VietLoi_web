@@ -38,7 +38,7 @@ export default function Header() {
                     <div className={styles.topContent}>
                         <Link href="/" className={styles.logo} onClick={closeMenu}>
                             <Image
-                                src="/logo.png"
+                                src="/images/logo.png"
                                 alt="VIỆT LỢI - Thu Mua Phế Liệu"
                                 width={40}
                                 height={40}

@@ -8,42 +8,42 @@ export default function MaterialCategories() {
         {
             name: 'Đồng',
             description: 'Thu mua đồng đỏ, đồng vàng, dây điện đồng với giá cao nhất thị trường',
-            image: '/copper.jpg'
+            image: '/images/copper.jpg'
         },
         {
             name: 'Nhôm',
             description: 'Thu mua nhôm thanh, nhôm tấm, nhôm lon bia và các loại nhôm khác',
-            image: '/aluminum.jpg'
+            image: '/images/aluminum.jpg'
         },
         {
             name: 'Inox',
             description: 'Thu mua inox 304, 201, 430 và các loại inox phế liệu',
-            image: '/stainless.jpg'
+            image: '/images/stainless.jpg'
         },
         {
             name: 'Sắt thép',
             description: 'Thu mua sắt thép xây dựng, sắt phế liệu các loại',
-            image: '/steel.jpg'
+            image: '/images/steel.jpg'
         },
         {
             name: 'Chì',
             description: 'Thu mua chì acquy, chì phế liệu công nghiệp',
-            image: '/steel.jpg'
+            image: '/images/Lead.png'
         },
         {
             name: 'Nhựa',
             description: 'Thu mua nhựa PP, PVC, PET và các loại nhựa phế liệu',
-            image: '/copper.jpg'
+            image: '/images/Plastic.png'
         },
         {
             name: 'Giấy',
             description: 'Thu mua giấy carton, bìa cứng và các loại giấy phế liệu',
-            image: '/aluminum.jpg'
+            image: '/images/Paper.png'
         },
         {
-            name: 'Vàng',
-            description: 'Thu mua vàng phế liệu, vàng từ linh kiện điện tử',
-            image: '/copper.jpg'
+            name: 'Niken',
+            description: 'Thu mua niken phế liệu',
+            image: '/images/niken.png'
         }
     ];
 
