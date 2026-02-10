@@ -104,7 +104,7 @@ export default function Footer() {
                 </div>
 
                 <div className={styles.footerBottom}>
-                    <p>&copy; 2025 Công Ty Thu Mua Phế Liệu. Tất cả quyền được bảo lưu.</p>
+                    <p>&copy; 2025 CÔNG TY TNHH KD TM DV VIỆT LỢI.</p>
                     <p>Thiết kế bởi <a href="#">X:Group</a></p>
                 </div>
             </div>

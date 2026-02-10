@@ -59,7 +59,7 @@ export default function Header() {
             <nav className={styles.mainNav}>
                 <div className="container">
                     <ul className={styles.navList}>
-                        <li><Link href="/">Trang chủ</Link></li>
+                        <li><Link href="/#">Trang chủ</Link></li>
                         <li><Link href="/#pricing">Bảng giá</Link></li>
                         <li><Link href="/#about">Giới thiệu</Link></li>
                         <li><Link href="/#contact">Liên hệ</Link></li>
@@ -106,7 +106,7 @@ export default function Header() {
                 <div className={styles.mobileMenuContent}>
                     <button className={styles.closeBtn} onClick={closeMenu}>×</button>
                     <ul className={styles.mobileNavList}>
-                        <li><Link href="/" onClick={closeMenu}>Trang chủ</Link></li>
+                        <li><Link href="/#" onClick={closeMenu}>Trang chủ</Link></li>
                         <li><Link href="/#pricing" onClick={() => {
                             // Hack nhỏ: Chờ 100ms để trang cuộn rồi mới tìm bảng giá để mở
                             setTimeout(() => {
