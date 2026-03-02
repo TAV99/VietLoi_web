@@ -36,7 +36,7 @@ export default function Footer() {
                             <li><a href="#">Thu mua nhôm</a></li>
                             <li><a href="#">Thu mua inox</a></li>
                             <li><a href="#">Thu mua sắt thép</a></li>
-                            <li><a href="#">Thu mua chì</a></li>
+                            <li><a href="#">Thu mua thiếc</a></li>
                             <li><a href="#">Thu mua niken</a></li>
                             <li><a href="#">Thu mua hợp kim</a></li>
                             <li><a href="#">Thu mua bao bì, phế liệu từ dây chuyền sản xuất đồ nhựa</a></li>
@@ -92,7 +92,7 @@ export default function Footer() {
                         </div>
                         <div className={styles.mapPlaceholder}>
                             <iframe
-                                src="https://maps.google.com/maps?q=10.978335621966155,106.73308711094909&hl=vi&z=14&output=embed"
+                                src="https://maps.google.com/maps?q=10.980352659916468,106.73363613823695&hl=vi&z=15&output=embed"
                                 width="100%"
                                 height="200"
                                 style={{ border: 0, borderRadius: '0.5rem' }}

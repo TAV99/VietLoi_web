@@ -36,7 +36,7 @@ export default function Locations() {
                                         <td className={styles.districtsCell}>{location.districts}</td>
                                         <td>
                                             <a
-                                                href="https://www.google.com/maps/search/?api=1&query=10.978335621966155,106.73308711094909"
+                                                href="https://www.google.com/maps/dir/?api=1&destination=10.980352659916468,106.73363613823695"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className={styles.mapBtn}

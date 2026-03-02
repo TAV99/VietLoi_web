@@ -16,7 +16,7 @@ export const metadata = {
         default: 'Thu Mua Phế Liệu Việt Lợi | Giá Cao - Uy Tín',
         template: '%s | Việt Lợi'
     },
-    description: 'Công ty thu mua phế liệu giá cao Việt Lợi tận nơi trên toàn quốc. Thu mua nhôm, đồng, inox, sắt thép, chì, niken, hợp kim. Báo giá nhanh, thanh toán liền tay.',
+    description: 'Công ty thu mua phế liệu giá cao Việt Lợi tận nơi trên toàn quốc. Thu mua nhôm, đồng, inox, sắt thép, niken, hợp kim, thiếc. Báo giá nhanh, thanh toán liền tay.',
     keywords: 'thu mua phế liệu, phế liệu giá cao, thu mua nhôm, thu mua đồng, thu mua inox, thu mua sắt thép',
     alternates: {
         canonical: './',

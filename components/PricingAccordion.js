@@ -23,7 +23,7 @@ const CATEGORY_ORDER = [
     'Sắt thép',
     'Nhựa',
     'Giấy',
-    'Chì',
+    'Hợp kim',
     'Niken',
     'Thiếc',
     'Kẽm',

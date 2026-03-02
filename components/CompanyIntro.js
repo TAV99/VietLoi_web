@@ -11,7 +11,7 @@ export default function CompanyIntro() {
                         <h3>Thu Mua Phế Liệu Uy Tín - Hơn 10 Năm Kinh Nghiệm</h3>
                         <p>
                             Với hơn 10 năm kinh nghiệm trong lĩnh vực thu mua phế liệu, chúng tôi là đơn vị uy tín hàng đầu tại Việt Nam.
-                            Chúng tôi chuyên thu mua các loại phế liệu: nhôm, đồng, inox, sắt thép, chì, niken, hợp kim, thiếc, vải tồn kho,
+                            Chúng tôi chuyên thu mua các loại phế liệu: nhôm, đồng, inox, sắt thép, niken, hợp kim, thiếc, vải tồn kho,
                             linh kiện điện tử và nhiều loại phế liệu khác.
                         </p>
                         <p>
