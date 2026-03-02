@@ -26,9 +26,14 @@ export default function MaterialCategories() {
             image: '/images/steel.jpg'
         },
         {
-            name: 'Chì',
-            description: 'Thu mua chì acquy, chì phế liệu công nghiệp',
-            image: '/images/Lead.png'
+            name: 'Thiếc',
+            description: 'Thu mua phế liệu thiếc cuộn, thiếc hàn, bã thiếc...',
+            image: '/images/phe-lieu-thiec.png'
+        },
+        {
+            name: 'Hợp kim',
+            description: 'Thu mua hợp kim mũi khoan, dao phay, hợp kim cứng...',
+            image: '/images/phe-lieu-hop-kim.png'
         },
         {
             name: 'Nhựa',
