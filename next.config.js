@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
   images: {
     remotePatterns: [
       {
@@ -16,7 +17,7 @@ const nextConfig = {
       {
         source: '/bang-gia/chi',
         destination: '/',
-        permanent: true, // 301 redirect
+        permanent: true,
       },
     ];
   },
