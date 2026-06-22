@@ -5,32 +5,6 @@ import styles from './PricingTable.module.css';
 // Force dynamic rendering to ensure fresh data on each request
 export const dynamic = 'force-dynamic';
 
-/**
- * Helper function to extract numeric price for sorting.
- */
-function extractMaxPrice(priceString) {
-    if (!priceString) return 0;
-    const numbers = priceString.match(/[\d.]+/g);
-    if (!numbers) return 0;
-    return Math.max(...numbers.map(n => parseFloat(n.replace(/\./g, ''))));
-}
-
-/**
- * Category order for sorting
- */
-const CATEGORY_ORDER = [
-    'Đồng',
-    'Nhôm',
-    'Inox',
-    'Sắt thép',
-    'Nhựa',
-    'Giấy',
-    'Hợp kim',
-    'Niken',
-    'Thiếc',
-    'Kẽm',
-    'Chung'
-];
 
 /**
  * Reusable PricingTable component - Flat unified table.

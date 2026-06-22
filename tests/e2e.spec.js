@@ -1,12 +1,10 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-const BASE_URL = 'https://phelieuvietloi.com';
-
 test.describe('VietLoi Website E2E Tests', () => {
 
     test('Homepage loads successfully with correct title', async ({ page }) => {
-        const response = await page.goto(BASE_URL);
+        const response = await page.goto('/');
 
         // Check HTTP status
         expect(response?.status()).toBe(200);
@@ -16,7 +14,7 @@ test.describe('VietLoi Website E2E Tests', () => {
     });
 
     test('Pricing table exists on page', async ({ page }) => {
-        await page.goto(BASE_URL);
+        await page.goto('/');
 
         // Check if #pricing-table element exists (or fallback to #pricing section)
         const pricingSection = page.locator('#pricing, #pricing-table').first();
@@ -24,7 +22,7 @@ test.describe('VietLoi Website E2E Tests', () => {
     });
 
     test('Footer contains Bình Dương address', async ({ page }) => {
-        await page.goto(BASE_URL);
+        await page.goto('/');
 
         // Check footer contains the location text
         const footer = page.locator('footer');
@@ -32,7 +30,7 @@ test.describe('VietLoi Website E2E Tests', () => {
     });
 
     test('robots.txt is accessible', async ({ request }) => {
-        const response = await request.get(`${BASE_URL}/robots.txt`);
+        const response = await request.get('/robots.txt');
 
         // Check HTTP status
         expect(response.status()).toBe(200);
@@ -43,7 +41,7 @@ test.describe('VietLoi Website E2E Tests', () => {
     });
 
     test('sitemap.xml is accessible', async ({ request }) => {
-        const response = await request.get(`${BASE_URL}/sitemap.xml`);
+        const response = await request.get('/sitemap.xml');
 
         // Check HTTP status
         expect(response.status()).toBe(200);

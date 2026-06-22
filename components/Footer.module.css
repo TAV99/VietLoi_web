@@ -119,6 +119,19 @@
     color: var(--color-primary-light);
 }
 
+.trio {
+    color: #ef4444;
+}
+
+.core {
+    color: #2ad4e8;
+}
+
+.solutions {
+    color: #ef4444;
+    margin-left: 0.3125rem;
+}
+
 @media (max-width: 1024px) {
     .footerContent {
         grid-template-columns: repeat(2, 1fr);

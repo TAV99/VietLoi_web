@@ -3,9 +3,9 @@ import styles from './Locations.module.css';
 export default function Locations() {
     const locations = [
         {
-            province: 'Thành phố Hồ Chí Minh',
-            address: 'Số 10/3, khu phố Bình Phước B, Phường An Phú, TP Hồ Chí Minh, Việt Nam',
-            districts: 'Thành phố Hồ Chí Minh và các tỉnh lân cận'
+            province: 'Bình Dương',
+            address: 'Số 10/3, khu phố Bình Phước B, Phường An Phú, Thuận An, Bình Dương, Việt Nam',
+            districts: 'Bình Dương và các tỉnh lân cận'
         }
     ];
 

@@ -10,7 +10,7 @@ export default defineConfig({
     workers: process.env.CI ? 1 : undefined,
     reporter: 'html',
     use: {
-        baseURL: 'https://phelieuvietloi.com',
+        baseURL: 'http://localhost:3000',
         trace: 'on-first-retry',
     },
     projects: [
@@ -23,4 +23,9 @@ export default defineConfig({
             use: { ...devices['Pixel 5'] },
         },
     ],
+    webServer: {
+        command: 'npm run start',
+        url: 'http://localhost:3000',
+        reuseExistingServer: !process.env.CI,
+    },
 });

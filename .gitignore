@@ -33,3 +33,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Omni-Coder Kit (generated)
+.omni/
+.agents/worktrees/
+.agents/scratch/
+.agents/logs/
+.agents/cache/
+.agents/tmp/
+
+# Playwright
+/playwright-report/
+/test-results/

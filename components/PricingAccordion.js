@@ -1,34 +1,9 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import PricingTableGrid from './PricingTableGrid';
 import styles from './PricingTable.module.css';
 
-/**
- * Helper function to extract numeric price for sorting.
- */
-function extractMaxPrice(priceString) {
-    if (!priceString) return 0;
-    const numbers = priceString.match(/[\d.]+/g);
-    if (!numbers) return 0;
-    return Math.max(...numbers.map(n => parseFloat(n.replace(/\./g, ''))));
-}
-
-/**
- * Category order for sorting
- */
-const CATEGORY_ORDER = [
-    'Đồng',
-    'Nhôm',
-    'Inox',
-    'Sắt thép',
-    'Nhựa',
-    'Giấy',
-    'Hợp kim',
-    'Niken',
-    'Thiếc',
-    'Kẽm',
-    'Chung'
-];
 
 /**
  * Global Collapsible Pricing Table
@@ -85,33 +60,6 @@ export default function PricingAccordion({ data, lastUpdated }) {
         year: 'numeric'
     });
 
-    // Group data by category
-    const groupedData = data.reduce((acc, item) => {
-        const category = item.category || 'Chung';
-        if (!acc[category]) {
-            acc[category] = [];
-        }
-        acc[category].push(item);
-        return acc;
-    }, {});
-
-    // Sort categories
-    const sortedCategories = Object.keys(groupedData).sort((a, b) => {
-        const orderA = CATEGORY_ORDER.indexOf(a);
-        const orderB = CATEGORY_ORDER.indexOf(b);
-        return (orderA === -1 ? 999 : orderA) - (orderB === -1 ? 999 : orderB);
-    });
-
-    // Sort items within each category by price (descending)
-    sortedCategories.forEach(category => {
-        groupedData[category].sort((a, b) => {
-            return extractMaxPrice(b.price) - extractMaxPrice(a.price);
-        });
-    });
-
-    // Flatten for row numbering
-    let rowIndex = 0;
-
     return (
         <section
             id="pricing"
@@ -151,42 +99,7 @@ export default function PricingAccordion({ data, lastUpdated }) {
                     {/* Collapsible Table Body - CSS Grid Trick */}
                     <div className={`${styles.contentWrapper} ${isOpen ? styles.open : ''}`}>
                         <div className={styles.minHeightFix}>
-                            <div className={styles.tableWrapper}>
-                                <table className={styles.priceTable}>
-                                    <thead>
-                                        <tr>
-                                            <th>STT</th>
-                                            <th>Tên Phế Liệu</th>
-                                            <th>Đơn Vị</th>
-                                            <th>Giá Thu Mua (VNĐ)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {sortedCategories.map(category => (
-                                            <React.Fragment key={`category-${category}`}>
-                                                {/* Category Sub-Header (Non-clickable) */}
-                                                <tr className={styles.categorySubHeader}>
-                                                    <td colSpan="4">{category.toUpperCase()}</td>
-                                                </tr>
-                                                {/* Items in this category */}
-                                                {groupedData[category].map((item, idx) => {
-                                                    rowIndex++;
-                                                    return (
-                                                        <tr key={`${category}-${item.material}-${idx}`} className={styles.itemRow}>
-                                                            <td className={styles.indexCell}>{rowIndex}</td>
-                                                            <td className={styles.materialCell}>
-                                                                <span className={styles.materialName}>{item.material}</span>
-                                                            </td>
-                                                            <td className={styles.unitCell}>{item.unit}</td>
-                                                            <td className={styles.priceCell}>{item.price}</td>
-                                                        </tr>
-                                                    );
-                                                })}
-                                            </React.Fragment>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                            <PricingTableGrid data={data} />
                         </div>
                     </div>
                 </div>

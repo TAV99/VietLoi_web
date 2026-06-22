@@ -13,7 +13,7 @@ import FloatingActions from '@/components/FloatingActions';
 import './globals.css';
 
 export const metadata = {
-    title: 'Thu Mua Phế Liệu Giá Cao - Nhanh Chóng Uy Tín Tận Nơi',
+    title: 'Thu Mua Phế Liệu Việt Lợi | Giá Cao - Nhanh Chóng Uy Tín Tận Nơi',
     description: 'Dịch vụ thu mua phế liệu giá cao tận nơi trên toàn quốc. Thu mua nhôm, đồng, inox, sắt thép, niken, hợp kim, thiếc, vải, linh kiện điện tử. Báo giá nhanh, thanh toán liền tay, cân đo uy tín.',
     keywords: 'thu mua phế liệu, phế liệu giá cao, thu mua nhôm, thu mua đồng, thu mua inox, thu mua sắt thép, thu mua thiếc, thu mua hợp kim, thu mua linh kiện điện tử',
     openGraph: {

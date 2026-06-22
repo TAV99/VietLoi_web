@@ -202,43 +202,6 @@
 }
 
 /* Accordion Category Header - Red Background */
-.categoryGroup {
-    border-bottom: 2px solid var(--color-gray-200);
-}
-
-.categoryHeader {
-    cursor: pointer;
-    transition: background 0.2s ease;
-}
-
-.categoryHeader:hover {
-    background: #b91c1c !important;
-}
-
-.categoryHeaderCell {
-    background: #dc2626;
-    color: white;
-    font-weight: 700;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 1rem 1.25rem !important;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.categoryTitle {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.chevron {
-    transition: transform 0.3s ease;
-    flex-shrink: 0;
-}
-
 .chevronExpanded {
     transform: rotate(180deg);
 }
@@ -257,24 +220,6 @@
     background: rgba(212, 175, 55, 0.08);
 }
 
-/* Table Header Columns */
-.thIndex {
-    width: 60px;
-    text-align: center;
-}
-
-.thMaterial {
-    min-width: 200px;
-}
-
-.thUnit {
-    width: 100px;
-    text-align: center;
-}
-
-.thPrice {
-    min-width: 180px;
-}
 
 /* Legacy styles for category cards (keeping for compatibility) */
 .categoryCard {
